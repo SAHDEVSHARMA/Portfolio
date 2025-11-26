@@ -11,13 +11,13 @@ export default function Testimonials() {
     {
       name: "Sarah Johnson",
       position: "CEO, TechStart",
-      image: "/professional-woman-headshot.jpg",
+      image: "/placeholder.png",
       text: "Sahdev is an exceptional developer who delivered our project ahead of schedule. His attention to detail and problem-solving skills are impressive. We'll definitely work with him again.",
     },
     {
       name: "Michael Chen",
       position: "Marketing Director, GrowthLabs",
-      image: "/professional-man-headshot 1.jpg",
+      image: "/placeholder.png",
       text: "Working with Sahdev was a pleasure. He understood our vision perfectly and created a website that exceeded our expectations. His communication throughout the project was excellent.",
     },
     

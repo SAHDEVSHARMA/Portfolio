@@ -39,7 +39,7 @@ export default function Hero() {
             <Button 
               variant="outline" 
               className="rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/50"
-              onClick={() => window.open('/cv.pdf', '_blank')}
+              onClick={() => window.open('/ss_resume.pdf', '_blank')}
             >
               Download CV 
             </Button>

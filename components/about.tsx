@@ -13,7 +13,7 @@ export default function About() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="flex justify-center">
           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/30">
-            <Image src="/professional-man-headshot.jpg" alt="Profile" fill className="object-cover" />
+            <Image src="/hero.jpg" alt="Profile" fill className="object-cover" />
           </div>
         </div>
 
