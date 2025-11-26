@@ -54,7 +54,7 @@ export default function Testimonials() {
               <div className="pt-4">
                 <div className="relative h-16 w-16 rounded-full overflow-hidden mx-auto mb-3">
                   <Image
-                    src={testimonials[currentIndex].image || "/placeholder.svg"}
+                    src={testimonials[currentIndex].image || "/placeholder.png"}
                     alt={testimonials[currentIndex].name}
                     fill
                     className="object-cover"
