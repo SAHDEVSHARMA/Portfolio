@@ -13,7 +13,7 @@ export default function About() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="flex justify-center">
           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/30">
-            <Image src="/hero.jpg" alt="Profile" fill className="object-cover" />
+            <Image src="/hero.png" alt="Profile" fill className="object-cover" />
           </div>
         </div>
 
@@ -47,8 +47,8 @@ export default function About() {
             </Card>
             <Card className="hover-lift cursor-pointer transition-all duration-300 hover:border-primary/50">
               <CardContent className="p-4 text-center">
-                <h4 className="font-bold text-4xl text-primary transition-transform duration-300 hover:scale-110">5+</h4>
-                <p className="text-sm text-muted-foreground mt-2">Awards Won</p>
+                <h4 className="font-bold text-4xl text-primary transition-transform duration-300 hover:scale-110">8+</h4>
+                <p className="text-sm text-muted-foreground mt-2">Techonology</p>
               </CardContent>
             </Card>
           </div>

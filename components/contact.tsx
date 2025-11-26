@@ -16,6 +16,7 @@ export default function Contact() {
     subject: "",
     message: "",
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -24,21 +25,35 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // TODO: Integrate with your preferred email service (EmailJS, SendGrid, etc.)
-    // For now, this demonstrates form validation and user feedback
+    setIsSubmitting(true)
+
     try {
-      // Simulated submission
-      await new Promise(resolve => setTimeout(resolve, 500))
-      
-      alert("Thank you for your message! I'll get back to you soon.")
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       })
+
+      const data = await response.json()
+
+      if (response.ok) {
+        alert("Thank you for your message! I'll get back to you soon.")
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        })
+      } else {
+        alert(data.error || "Something went wrong. Please try again or contact me directly via email.")
+      }
     } catch (error) {
+      console.error('Error submitting form:', error)
       alert("Something went wrong. Please try again or contact me directly via email.")
+    } finally {
+      setIsSubmitting(false)
     }
   }
 
@@ -146,9 +161,9 @@ export default function Contact() {
                   />
                 </div>
 
-                <Button type="submit" className="w-full sm:w-auto">
+                <Button type="submit" className="w-full sm:w-auto" disabled={isSubmitting}>
                   <Send className="h-4 w-4 mr-2" />
-                  Send Message
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </CardContent>

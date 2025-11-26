@@ -10,13 +10,13 @@ export default function Experience() {
       // period: "2021 - Present",
       description:
         "Developing a full-stack AI interior design platform that transforms real room photos into professional-ready visualizations, reducing manual design effort."    },
-    // {
-    //   title: "UI/UX Designer & Developer",
-    //   company: "Creative Solutions",
-    //   period: "2019 - 2021",
-    //   description:
-    //     "Designed and developed user interfaces for various clients. Created wireframes, prototypes, and implemented them using modern frontend technologies.",
-    // },
+    {
+      title: "Web Developer",
+      company: "Cognifyz Techonologies",
+      period: "May 2025 - June 2025",
+      description:
+        "I worked as a Web Dev Intern at Cognifyz Technologies.",
+    },
     {
       title: "Web Developer",
       company: "Startup Genie",
